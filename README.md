@@ -86,3 +86,11 @@ peso 6 nessa média.
 • Haskell
 
 • Prolog
+
+Este é um projeto incrível desenvolvido por:
+
+- Bianca Maia Ribeiro
+- Eduardo Salbego
+- Marcelle Model
+- Maria Luiza Ribeiro Rocha
+
