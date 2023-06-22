@@ -86,5 +86,3 @@ peso 6 nessa média.
 • Haskell
 
 • Prolog
-
-Bom trabalho!!!
