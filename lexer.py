@@ -1,3 +1,5 @@
+# ref: https://youtu.be/Eythq9848Fg
+
 from enum import Enum
 
 class TToken(Enum):
