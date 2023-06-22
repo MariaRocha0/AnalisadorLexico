@@ -89,8 +89,8 @@ peso 6 nessa média.
 
 Este é um projeto incrível desenvolvido por:
 
-- Bianca Maia Ribeiro
-- Eduardo Salbego
-- Marcelle Model
-- Maria Luiza Ribeiro Rocha
+- [Bianca Maia Ribeiro](https://github.com/BiancaMR04)
+- [Eduardo Salbego](https://github.com/EduardoSalbego)
+- [Marcelle Model](https://github.com/elle-mdl)
+- [Maria Luiza Ribeiro Rocha](https://github.com/Mariarocha0)
 
