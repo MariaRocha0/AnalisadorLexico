@@ -22,10 +22,13 @@ class TToken(Enum):
     ASPAS         = '"'
     EXCL          = '!'
     QUEST         = '?'
+    CIF           = '$'
     # comandos condicionais 
-    COND            = 'DO, IF, ELSE, THEN'
+    COND          = 'DO, IF, ELSE, THEN'
     # atribuição
-    ASSIGNTYPE        = '::, ->, <-'
+    ASSIGNTYPE    = '::, ->, <-, /=, ==, <=, >='
+    # op lógicos 
+    BOOL = '&&, ||'
     # leitura e escrita
     IO            = 'IO, PutStrLn, getLine'
     # misc 
@@ -189,6 +192,72 @@ class Lexer:
                 token = Token(
                     type=TToken.ASSIGNTYPE,
                     value=TToken.ASSIGNTYPE.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+
+            if self.current_char == '/' and self.peek() == '=':
+                token = Token(
+                    type=TToken.ASSIGNTYPE,
+                    value=TToken.ASSIGNTYPE.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+            
+            if self.current_char == '=' and self.peek() == '=':
+                token = Token(
+                    type=TToken.ASSIGNTYPE,
+                    value=TToken.ASSIGNTYPE.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+            
+            if self.current_char == '<' and self.peek() == '=':
+                token = Token(
+                    type=TToken.ASSIGNTYPE,
+                    value=TToken.ASSIGNTYPE.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+            
+            if self.current_char == '>' and self.peek() == '=':
+                token = Token(
+                    type=TToken.ASSIGNTYPE,
+                    value=TToken.ASSIGNTYPE.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+            
+            if self.current_char == '&' and self.peek() == '&':
+                token = Token(
+                    type=TToken.BOOL,
+                    value=TToken.BOOL.value,  
+                    lineno=self.lineno,
+                    column=self.column,
+                )
+                self.avanca()
+                self.avanca()
+                return token
+            
+            if self.current_char == '|' and self.peek() == '|':
+                token = Token(
+                    type=TToken.BOOL,
+                    value=TToken.BOOL.value,  
                     lineno=self.lineno,
                     column=self.column,
                 )
