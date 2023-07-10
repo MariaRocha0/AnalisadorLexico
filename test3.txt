@@ -1,0 +1,8 @@
+main :: IO ()
+main = do
+  let operador = "+"
+      num1 = 10
+      num2 = 5
+
+  putStrLn $ "Operação: " ++ show num1 ++ " " ++ operador ++ " " ++ show num2
+  putStrLn $ "Resultado: " ++ show (calcular operador num1 num2)
